@@ -31,10 +31,12 @@ public class ExamenED {
                     int metros = km * 1000;
                     break;
                 case 3:
+                    double kmH;
+                    double mS = kmH / 3.6;
                     break;
                 default:
             }
-        }while(opt!=3);
+        }while(opt!=4);
     }
     
 }
