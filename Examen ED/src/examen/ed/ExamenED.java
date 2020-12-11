@@ -21,20 +21,36 @@ public class ExamenED {
         Scanner teclado = new Scanner (System.in);
         int opt;
         do{
+            System.out.println("¿Qué quieres hacer?");
+            System.out.println("1. Pasar de horas a segundos");
+            System.out.println("2. Pasar de kilómetros a metros");
+            System.out.println("3. Pasar de km/h a m/s");
+            System.out.println("4. Salir");
+            System.out.print("Teclea la opción que quieres realizar: ");
+            opt = teclado.nextInt();
             switch (opt){
                 case 1:
-                    int horas;
+                    System.out.print("Cuántas horas quieres pasar a segundos?: ");
+                    int horas = teclado.nextInt();
                     int segundos = horas * 3600;
+                    System.out.println(horas + " horas son " + segundos + " segundos.");
                     break;
                 case 2:
-                    int km;
+                    System.out.println("¿Cuántos kilómetos quieres pasar a metros?: ");
+                    int km = teclado.nextInt();
                     int metros = km * 1000;
+                    System.out.println(km + " kilómetros son " + metros + " metros.");
                     break;
                 case 3:
-                    double kmH;
+                    System.out.println("¿Cuántos km/h quieres pasar a m/s?: ");
+                    double kmH = teclado.nextDouble();
                     double mS = kmH / 3.6;
+                    System.out.println(kmH + " km/h son " + mS + " m/s.");
                     break;
+                case 4:
+                    System.out.println("Saliendo del programa...");
                 default:
+                    System.out.println("Introduce una opción correcta.");
             }
         }while(opt!=4);
     }
